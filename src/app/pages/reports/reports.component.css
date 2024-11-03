@@ -1,0 +1,132 @@
+/* Full page container to center the content */
+/* Home container settings */
+.home-container {
+  position: relative;
+  width: 100%;
+  min-height: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0px;
+  z-index: -1;
+  background: none;
+}
+.reports-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background: none;
+    z-index: 2;
+  
+  }
+  body{
+    background: none;
+  }
+  
+  /* Box styling */
+  .box {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #490675;
+    box-shadow: 0 0 3px 3px rgba(245, 242, 247, 0.2); /* White luminance shadow */
+    width: 80%; /* Make sure it takes full width if necessary */
+    margin-bottom: 15px;
+    margin-top: 15px; /* Add some margin between boxes */
+    z-index: 2;
+    background: black;
+    min-width: 250px;
+  }
+
+    /* Box styling */
+    .box-coming {
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #490675;
+      box-shadow: 0 0 3px 3px rgba(245, 242, 247, 0.5); /* White luminance shadow */
+      width: 80%; /* Make sure it takes full width if necessary */
+      z-index: 2;
+      background: black;
+      opacity: 0.5;
+      min-width: 250px;
+    }
+  
+  /* Title styling */
+  h2 {
+    font-family: 'Open Sans';
+    font-size: 28px;
+    color: antiquewhite;
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+  
+  /* Text styling */
+  p {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  
+  /* Button styling */
+  button {
+    background:none;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    border: 2px solid #490675;
+  }
+  
+  /* Hover effect on button */
+  .button:hover {
+    background-color: #9700b5;
+  }
+
+  .column {
+    min-width: 300px;
+    position: relative;
+    display: flex; /* Add flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .column {
+        width: 100%; /* Stack boxes on smaller screens */
+        max-width: none;
+    }
+}
+
+    /* Fullscreen canvas for galaxy effect */
+#galaxyCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;  /* Keep the canvas behind other elements */
+    background-color: black;
+    z-index: 2;
+  }
+
+  /* Style the images inside the report boxes */
+.report-image {
+  width: 90%; /* Set image width to 90% of the box */
+  display: block;
+  margin: 0 auto; /* Center the image */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  opacity: .8;
+}
+.columns {
+  margin-top: 15px;
+}

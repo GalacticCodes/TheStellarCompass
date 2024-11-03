@@ -1,0 +1,47 @@
+.terms-of-service-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #FFFFFF; /* Change all text to white */
+  font-family: 'Open Sans';
+  line-height: 1.6;
+}
+
+.terms-of-service-container h1 {
+  text-align: center;
+  color: #FFFFFF; /* Set text color to white */
+  margin-bottom: 1.5rem;
+}
+
+.terms-of-service-container .last-updated {
+  text-align: center;
+  font-style: italic;
+  color: #FFFFFF; /* Set text color to white */
+  margin-bottom: 2rem;
+}
+
+.terms-of-service-container h2 {
+  color: #FFFFFF; /* Set text color to white */
+  margin-top: 2rem;
+}
+
+.terms-of-service-container h3 {
+  color: #FFFFFF; /* Set text color to white */
+  margin-top: 1.5rem;
+}
+
+.terms-of-service-container p, .terms-of-service-container ul, .terms-of-service-container address {
+  color: #FFFFFF; /* Set text color to white */
+  margin-bottom: 1.5rem;
+}
+
+.terms-of-service-container ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+  color: #FFFFFF; /* Set text color to white */
+}
+
+.terms-of-service-container address {
+  color: #FFFFFF; /* Set text color to white */
+  font-style: normal;
+}

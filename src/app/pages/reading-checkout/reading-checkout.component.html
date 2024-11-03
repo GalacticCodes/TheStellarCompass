@@ -1,0 +1,38 @@
+<div class="booking-form-container box has-background-black-ter">
+  <div class="booking-form">
+    <h2>Book Your Astrology Reading</h2>
+
+    <!-- Name input -->
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" [(ngModel)]="name" required>
+    
+    <!-- Select available date -->
+    <label for="booking-date">Select a Date:</label>
+    <select id="booking-date" [(ngModel)]="bookingDate" required>
+      <option value="" disabled selected>Select Date</option>
+      <option *ngFor="let date of availableDates" [value]="date">{{ date }}</option>
+    </select>
+
+    <!-- Birth details -->
+    <label for="birth-date">Birth Date:</label>
+    <input type="date" id="birth-date" [(ngModel)]="birthDate" required>
+
+    <label for="birth-time">Local Birth Time:</label>
+    <input type="time" id="birth-time" [(ngModel)]="birthTime" required>
+
+    <label for="birth-location">Birth Location:</label>
+    <input type="text" id="birth-location" [(ngModel)]="birthLocation" required>
+
+    <!-- Email input -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" required>
+
+    <p><strong>Price: $120 USD</strong></p>
+
+    <!-- Submit button -->
+    <button class="button button-shadow" (click)="bookReading()">Book and Pay</button>
+
+    <p><strong>Please Note:</strong> Your consultation fee includes time and energy spent researching your chart and preparing for your reading before it is delivered. This process takes Victoria anywhere from 4 to 6+ hours depending on the complexity of your chart. No refunds will be given after your payment is submitted. All sales are final.</p>
+  </div>
+</div>
+  <script src="https://js.stripe.com/v3/"></script>

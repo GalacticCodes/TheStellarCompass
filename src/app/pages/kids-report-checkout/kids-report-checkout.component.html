@@ -1,0 +1,26 @@
+<div class="booking-form-container box has-background-black-ter">
+    <div class="booking-form">
+      <form (ngSubmit)="orderKidsReport()">
+        <h2>Order Your Cosmic Compass for Kids</h2>
+        <label for="childName">Child's Name:</label>
+        <input [(ngModel)]="childName" name="childName" id="childName" placeholder="">
+        
+        <label for="birthDate">Birth Date:</label>
+        <input [(ngModel)]="birthDate" name="birthDate" id="birthDate" type="date" required>
+        
+        <label for="birthTime">Local Birth Time:</label>
+        <input [(ngModel)]="birthTime" name="birthTime" id="birthTime" type="time" required>
+        
+        <label for="birthLocation">Birth Location:</label>
+        <input [(ngModel)]="birthLocation" name="birthLocation" id="birthLocation" placeholder="" required>
+        
+        <label for="parentEmail">Parent's Email:</label>
+        <input [(ngModel)]="parentEmail" name="parentEmail" id="parentEmail" type="email" placeholder="" required>
+        <p><strong>Price:</strong> $39.99 USD</p>
+        <button type="submit" class="button">Order Kids Report</button>
+      </form>
+    
+      <p><strong>Please Note:</strong> Upon completion of payment, you will recieve a confirmation email and our team will begin working on your report. Considering the complexity of the report, please allow 14 days for your report to be completed. Because of the time and energy spent on your report, all sales are to be considered final.</p>
+    </div>
+  </div>
+    <script src="https://js.stripe.com/v3/"></script>

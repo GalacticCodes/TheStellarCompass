@@ -1,0 +1,24 @@
+<div class="planet-table-container">
+    <h2 class="title has-text-centered">Planetary Positions and Ascendant</h2>
+  
+    <table class="table is-fullwidth is-bordered is-striped">
+      <thead>
+        <tr>
+          <th>Planet</th>
+          <th>Position in Zodiac</th>
+          <th>Ascendant Degree</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loop through planetsData to display the planet's name and position -->
+        <tr *ngFor="let planet of planetsData">
+          <td>{{ planet.name }}</td>
+          <td>{{ planet.position }}°</td>
+          <td>{{ ascendantPosition }}°</td> <!-- Same ascendant for all rows -->
+          <td>{{ calculationTime }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

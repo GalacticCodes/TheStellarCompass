@@ -1,0 +1,19 @@
+/* payment-success.component.css */
+.payment-success-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+  
+  h1 {
+    color: #4caf50;
+  }
+  
+  .button {
+    margin-top: 20px;
+  }
+  

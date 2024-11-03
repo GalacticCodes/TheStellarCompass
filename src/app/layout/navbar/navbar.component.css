@@ -1,0 +1,38 @@
+.navbar {
+    padding: 1rem;
+    box-shadow: 0 0 3px 3px rgba(245, 242, 247, 0.5); /* White luminance shadow */
+    
+    background: none;
+  }
+  
+  .navbar-burger {
+    display: none;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .navbar-burger {
+      display: block;
+    }
+  }
+  /* Hide the title on mobile devices (screen width less than 768px) */
+@media (max-width: 768px) {
+  .navbar-title {
+    display: none;
+  }
+}
+
+.navbar-title{
+  font-size: 36px;
+}
+
+.navbar-item{ 
+  font-size: 21px;
+}
+app-galaxy-canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

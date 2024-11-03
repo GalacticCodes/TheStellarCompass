@@ -1,0 +1,28 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <!-- Add your logo here -->
+      <img src="/assets/images/logo.png" alt="Logo" style="max-height: 69px;" />
+    </a>
+    <a class="navbar-item">
+      <h1 class="navbar-title has-text-white has-text-weight-light has-text-primary-light">The Stellar Compass</h1>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" (click)="toggleMenu()">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div [ngClass]="{ 'is-active': isMenuActive }" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="/">Home</a>
+      <a class="navbar-item" href="/about">About Me</a>
+      <a class="navbar-item" href="/readings">Natal Chart Reading</a>
+      <a class="navbar-item" href="/kids-report">Kid's Report</a>
+      <a class="navbar-item" href="/family-synastry">Synastry</a>
+    </div>
+  </div>
+</nav>

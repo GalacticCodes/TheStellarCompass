@@ -1,0 +1,68 @@
+<div class="booking-form-container box has-background-black-ter">
+    <div class="booking-form">
+      <h2>Book Your Family Synastry Reading</h2>
+  
+        <!-- Email input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" required>
+
+         <!-- Select available date -->
+      <label for="booking-date">Select a Date:</label>
+      <select id="booking-date" [(ngModel)]="bookingDate" required>
+        <option value="" disabled selected>Select Date</option>
+        <option *ngFor="let date of availableDates" [value]="date">{{ date }}</option>
+      </select>
+    
+  
+      <!-- Person 1 - Birth details -->
+      <h3 class="is-size-4 has-text-centered has-text-white" style="margin-top: 4vh; margin-bottom: 2vh;">Family Member 1</h3>
+      
+         <!-- Person 2 - Name input -->
+         <label for="name2">Full Name (Person 1):</label>
+         <input type="text" id="name1" [(ngModel)]="name1" required>
+     
+      
+      <label for="birth-date1">Birth Date:</label>
+      <input type="date" id="birth-date1" [(ngModel)]="birthDate1" required>
+  
+      <label for="birth-time1">Local Birth Time:</label>
+      <input type="time" id="birth-time1" [(ngModel)]="birthTime1" required>
+  
+      <label for="birth-location1">Birth Location:</label>
+      <input type="text" id="birth-location1" [(ngModel)]="birthLocation1" required>
+  
+    
+      <!-- Person 2 - Birth details -->
+      <h3 class="is-size-4 has-text-centered has-text-white" style="margin-top: 4vh; margin-bottom: 2vh;">Family Member 2</h3>
+      
+        <!-- Person 2 - Name input -->
+        <label for="name2">Full Name (Person 2):</label>
+        <input type="text" id="name2" [(ngModel)]="name2" required>
+    
+      
+      <label for="birth-date2">Birth Date:</label>
+      <input type="date" id="birth-date2" [(ngModel)]="birthDate2" required>
+  
+      <label for="birth-time2">Local Birth Time:</label>
+      <input type="time" id="birth-time2" [(ngModel)]="birthTime2" required>
+  
+      <label for="birth-location2">Birth Location:</label>
+      <input type="text" id="birth-location2" [(ngModel)]="birthLocation2" required>
+  
+    
+  
+      <p><strong>Price: $270 USD</strong></p>
+  
+      <!-- Submit button -->
+      <button class="button button-shadow" (click)="bookSynastryReading()">Book and Pay</button>
+  
+      <p><strong>Please Note:</strong> Your consultation fee includes time and energy spent researching both charts and preparing for your reading before it is delivered. This process takes Victoria 6 to 8+ hours depending on the complexity of both charts. No refunds will be given after your payment is submitted. All sales are final.</p>
+    </div>
+  </div>
+  
+  <script src="https://js.stripe.com/v3/"></script>
+  
+  <div *ngIf="isLoading" class="loading-overlay">
+    <div class="solar-spinner"></div> <!-- Replace img with solar spinner -->
+  </div>
+  

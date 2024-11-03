@@ -1,0 +1,39 @@
+/* Ensure the chart takes up the entire container when populated */
+app-astro-chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;        /* Full width of the container */
+  height: 100%;       /* Full height of the container */
+  display: block;
+  z-index: 4;
+  margin: 0;          /* Remove any margin for full coverage */
+  padding: 0;         /* Optional: adjust padding if necessary */
+  box-sizing: border-box; /* Ensure padding and borders are included in size */
+}
+
+/* Adjust z-index for app-user-input and app-galaxy-canvas to layer properly */
+app-user-input {
+  z-index: 3;
+  width: 80%; /* Adjust form width */
+  margin: 20px 0;
+}
+
+app-galaxy-canvas {
+  z-index: 1;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  min-height: 150vh;
+  height: auto; /* Ensures it takes up the full viewport height */
+  position: relative;
+  overflow: hidden; /* Hide overflow to prevent scrolling if chart fills the container */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}

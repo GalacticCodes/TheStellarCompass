@@ -1,0 +1,69 @@
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2vh 3vw;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 800px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.image-column,
+.text-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.image-column img {
+  max-width: 100%;
+  max-height: 400px; /* Adjusts height for visual balance */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .image-column img {
+      max-height: 300px; /* Smaller image on mobile */
+  }
+
+  .text-column p {
+      padding: 0 2vw;
+  }
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background: none;
+  color: #ffffff;
+  border: 1px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  border: 1px solid purple;
+  color: purple;
+}
+

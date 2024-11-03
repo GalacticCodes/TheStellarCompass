@@ -1,0 +1,358 @@
+.page-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+
+/* Galaxy Canvas as full-page background */
+app-galaxy-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind other content */
+    background-color: black;
+}
+
+/* Kids Report Container */
+.kids-report-container {
+    max-width: 800px;
+    margin: 0 auto; /* Center container horizontally */
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    border-radius: 8px;
+    z-index: 1;
+    position: relative;
+    color: #FAEBD7; /* Set all text to antique white */
+}
+.section-title {
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/images/kidthumbnail.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.33; /* Adjust the opacity here */
+    z-index: -1;
+}
+
+/* Title Section */
+.section-title h1 {
+    margin-top: 12%; 
+    color: #FFFFFF; 
+    text-shadow: 
+            2px 2px 6px rgba(255, 215, 0, 0.3),
+            -2px -2px 6px rgba(255, 215, 0, 0.3),
+            0px 0px 8px rgba(255, 215, 0, 0.2);
+    text-align: center;
+}
+
+.section-title p {
+    width: 90vw; 
+    font-family: cursive; 
+    color: #FFFFFF; 
+    text-shadow: 
+            2px 2px 6px rgba(255, 215, 0, 0.2),
+            -2px -2px 6px rgba(255, 215, 0, 0.2),
+            0px 0px 8px rgba(255, 215, 0, 0.2);
+}
+
+.section-questions{
+    width: 90%;
+}
+.section-included {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* Questions Section */
+.section-questions h2,
+.section-purpose h2,
+.section-included h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+}
+
+.section-questions ul {
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.section-questions ul li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 1.1rem; /* Slightly larger for readability */
+    font-weight: 400;
+}
+
+.section-questions ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FAEBD7;
+    font-size: 1.2rem;
+}
+
+/* Purpose Section */
+.section-purpose p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+/* Included Section */
+.section-included ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.section-included li {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.section-included li strong {
+    font-weight: 600;
+    color: #a57ef8;
+}
+
+/* Overall adjustments */
+.highlight {
+    font-weight: 600;
+    color: #a57ef8;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+/* Purchase Button Container */
+.purchase-button-container {
+    display: flex;
+    flex-direction: row; /* Display buttons side by side by default */
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 20%;
+}
+@media (min-width: 550px) {
+    .purchase-button-container {
+        margin-top: 10vw;
+    }
+}
+@media (min-width: 1000px) {
+    .purchase-button-container {
+        margin-top: 7vw;
+    }
+}
+.purchase-button-container button {
+    flex: 1; /* Ensures buttons take equal space */
+}
+
+/* Stack buttons vertically on smaller screens */
+@media (max-width: 550px) {
+    .purchase-button-container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+    }
+}
+
+
+/* Button Styling */
+.button-primary,
+.button-secondary {
+    margin-top: 15px;
+    padding: 10px 10px;
+    background-color: transparent; /* Light pale blue */
+    color: white; /* Darker text color for better contrast */
+    border: 1px solid #01defc;
+    ;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: light;
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+    background-color: #87CEEB;
+    color: black; /* Brighter light blue for hover effect */
+}
+
+.cosmic-compass-box {
+    padding: 1rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .cosmic-compass-box {
+        width: 90vw;
+    }
+}
+
+
+.cosmic-compass-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1em auto;
+}
+
+.cosmic-compass-table th,
+.cosmic-compass-table td {
+    text-align: center;
+    border: none;
+    color: #ffffff;
+    padding: 1em 0; /* Removed horizontal padding */
+}
+
+.cosmic-compass-table th {
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.cosmic-compass-table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cosmic-compass-table tr:last-child td {
+    border-bottom: none;
+}
+
+.cosmic-compass-table td:first-child {
+    font-size: 1.5em;
+    padding-right: 0.2em;
+    width: 40px;
+}
+
+.cosmic-compass-table td:nth-child(2) {
+    padding-left: 0;
+    text-align: left;
+    color: white;
+}
+
+.bonus-items {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.bonus-items ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bonus-items li {
+    margin-bottom: 0.5em;
+}
+
+.section-included p,
+.bonus-items h3 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.two-column-container {
+    display: flex;
+    flex-direction: column; /* Aligns items in a row */
+    justify-content: center;
+    align-items: center; /* Centers items vertically */
+    width: 100%; /* Container spans full width */
+    gap: 0rem; /* Adds space between the columns */
+    margin-top: 3%;
+}
+
+.two-column-container img,
+.two-column-container h2 {
+    width: 100%; /* Each column takes up 50% of the container width */
+    box-sizing: border-box;
+}
+
+.two-column-container img{
+max-width: 450px;
+}
+
+.para-des{
+    max-width: 600px; /* Limits width of paragraph container */
+    margin: 0 auto; /* Centers the paragraph container */
+    margin-top: 2rem; /* Adds space above the paragraph */
+    text-align: left;
+}
+
+.centered-paragraph {
+    margin: 9% auto 0 auto; /* Centers the element horizontally and adds top margin */
+    font-family: cursive;
+    max-width: 600px; /* Limits width for readability */
+    text-align: center; /* Centers text inside the paragraph */
+}
+.spaced-text {
+    letter-spacing: 0.05em; /* Adjust letter spacing as desired */
+  }
+  .yellow-light {
+    text-shadow: 
+      3px 3px 8px rgba(255, 215, 0, 0.1),  /* Brighter, more prominent golden shadow */
+      -3px -3px 8px rgba(255, 170, 0, 0.06), /* Warmer, richer gold tone */
+      0px 0px 12px rgba(255, 223, 0, 0.1); /* Adds a subtle glow */
+  }
+  .banner {
+    width: 100%;
+    background-color: #333; /* Adjust background color as needed */
+    padding: 2vh 0;
+    text-align: center;
+    box-shadow: 0 0 3px 3px rgba(245, 242, 247, 0.3); /* White luminance shadow */
+      border-top: 2px solid #490675;
+      width: 90%;
+      max-width: 600px;
+      margin: 3vh 0;
+  }
+  
+  .banner h2 {
+    margin: 0;
+  }
+

@@ -1,0 +1,92 @@
+.chart-container {
+  position: relative;
+  padding-top: calc( 8.5 / 11 * 100%);  /* Maintain the aspect ratio of 8.5x11 */  /* Maximum width for desktop */
+  max-width: 950px;
+  height: auto;  /* Allow height to adjust based on width */
+  margin: 0 auto;  /* Center the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    /* Hide any overflow content */
+  min-height: 100vh; 
+}
+
+.header-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  color: black;
+  font-size: calc(0.99vw + 0.43vh); /* Scale text size based on viewport dimensions */
+  padding: calc(0.22vw + 0.22vh); /* Consistent padding */
+}
+
+/* Child components (e.g., app-base-chart, app-planets, etc.) are still positioned relatively within the wheel-container */
+app-base-chart, app-houses, app-planets, app-transits, app-aspects {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+app-base-chart {
+  z-index: 1;  /* Base chart at the bottom */
+}
+
+app-houses {
+  z-index: 2;  /* Houses on top of the base chart */
+}
+
+app-planets {
+  z-index: 3;  /* Planets on top of houses and base chart */
+}
+
+app-transits {
+  z-index: 4;
+}
+
+app-aspects {
+  z-index: 5;
+}
+.stellar-compass-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  color: black;
+  font-size: calc(0.69vw + 0.33vh); /* Same font scaling as header */
+  padding: calc(0.22vw + 0.22vh); /* Consistent padding with header */
+}
+
+.stellar-compass-container h1 {
+  font-size: calc(2.1vw + 1.2vh); /* Larger scaling for the title */
+  color: #333; /* Dark text color */
+}
+
+.stellar-compass-container p {
+  font-size: calc(0.99vw + 0.44vh); /* Same font scaling as header */
+  color: #333; /* Lighter text color */
+}
+
+/* Ensure proper scaling on mobile devices */
+@media (max-width: 600px) {
+  .chart-container {
+      width: 100%;  /* Full width of the viewport */
+      padding-top: calc(11 / 8.5 * 100%);  /* Maintain aspect ratio */
+      max-width: none;  /* No max width on mobile */
+  }
+}
+
+app-legend{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  color: black;
+  font-size: calc(0.69vw + 0.33vh); /* Same font scaling as header */
+  padding: calc(0.22vw + 0.22vh); /* Consistent padding with header */
+}
+
+
+

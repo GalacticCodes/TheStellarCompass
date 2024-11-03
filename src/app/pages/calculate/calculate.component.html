@@ -1,0 +1,17 @@
+<div class="home-container">
+  <app-galaxy-canvas></app-galaxy-canvas>
+
+  <!-- User Input Form: Only show if showChart is false -->
+  <app-user-input *ngIf="!showChart" (formSubmitted)="onFormSubmitted($event)"></app-user-input>
+
+  <app-astro-chart 
+  *ngIf="showChart"
+  [name]="formData.name"
+  [birthDate]="formData.date"
+  [birthUtcTime]="formData.utcTime"
+  [birthLatitude]="formData.latitude ?? 0"
+  [birthLongitude]="formData.longitude ?? 0"
+  [birthTown]="formData.town">
+</app-astro-chart>
+
+</div>

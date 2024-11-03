@@ -1,0 +1,59 @@
+<div *ngIf="isFormSubmitted">
+  <div #chartContainer class="chart-container has-background-info-light">
+
+      <!-- Header container for birth details -->
+      <div id="header-content" class="header-container">
+          <p> Name: {{ name }}</p>
+          <p>Born on {{ birthDate }} at {{ birthUtcTime }}</p>
+          <p> Latitude {{ birthLatitude }}, Longitude {{ birthLongitude }}</p>
+      </div>
+
+      <div class="wheel-container">
+          <!-- Include the base chart and other components -->
+          <app-base-chart></app-base-chart>
+
+          <app-planets 
+              [formData]="{ birthDate: birthDate, birthTime: birthUtcTime, birthLatitude: birthLatitude, birthLongitude: birthLongitude }">
+          </app-planets>
+
+          <app-houses 
+              [formData]="{ birthDate: birthDate, birthTime: birthUtcTime, birthLatitude: birthLatitude, birthLongitude: birthLongitude }">
+          </app-houses>
+
+          <app-transits 
+              [formData]="{ birthDate: birthDate, birthTime: birthUtcTime, birthLatitude: birthLatitude, birthLongitude: birthLongitude }">
+          </app-transits>
+
+          <app-aspects 
+              [formData]="{ birthDate: birthDate, birthTime: birthUtcTime, birthLatitude: birthLatitude, birthLongitude: birthLongitude }">
+          </app-aspects>
+      </div>
+
+      <!-- Container for the text and logo in the upper right corner -->
+  <div class="stellar-compass-container">
+    <h1>The Stellar Compass</h1>
+    <p>Study the cosmos, illuminate yourself</p>
+    </div>
+
+
+  </div>
+
+  <div style="margin-top: 20px;">
+    
+    <h1 class="is-size-3">Join our free Discord community!</h1>
+    <div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; margin: auto;">
+        <a href="https://discord.gg/Xdcs6RPb" target="_blank" style="display: inline-block; margin-top: 2vh;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 55" width="50" height="50">
+                <path fill="#5865F2" d="M60.104 4.5A57.876 57.876 0 0 0 46.792 0a42.09 42.09 0 0 0-.21.42c6.29 1.916 9.762 4.9 9.762 4.9a56.754 56.754 0 0 0-19.876-3.324 56.819 56.819 0 0 0-19.826 3.324s3.432-3.05 9.752-4.9l-.146-.3a57.858 57.858 0 0 0-13.36 4.5c-8.434 11.982-10.706 23.612-9.56 35.172a58.862 58.862 0 0 0 17.382 8.864 42.744 42.744 0 0 0 3.662-5.854 31.3 31.3 0 0 1-5.854-2.812c.494-.36.98-.74 1.448-1.12 11.51 5.4 21.76 5.4 33.222 0 .484.4.974.78 1.472 1.12a31.202 31.202 0 0 1-5.854 2.812 43.108 43.108 0 0 0 3.662 5.854 58.86 58.86 0 0 0 17.36-8.864c1.372-14.492-2.392-26.076-9.502-35.172zM23.172 37.776c-2.732 0-5.01-2.524-5.01-5.6 0-3.076 2.232-5.6 5.01-5.6 2.798 0 5.076 2.524 5.034 5.6 0 3.076-2.232 5.6-5.034 5.6zm24.62 0c-2.732 0-5.01-2.524-5.01-5.6 0-3.076 2.232-5.6 5.01-5.6 2.8 0 5.078 2.524 5.034 5.6 0 3.076-2.232 5.6-5.034 5.6z"/>
+            </svg>
+        </a>
+    </div>
+    
+  </div>
+</div>
+
+
+  
+  
+
+  

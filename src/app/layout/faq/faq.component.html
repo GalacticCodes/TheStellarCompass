@@ -1,0 +1,17 @@
+<div class="faq-container">
+    <h1 class="custom-title">Astrology FAQ</h1>
+    <table class="faq-table">
+      <tr *ngFor="let faq of faqs; let i = index">
+        <td>
+          <div class="question" (click)="toggleAnswer(i)">
+            <span>{{ faq.question }}</span>
+            <span class="arrow" [ngClass]="{'open': faq.open}">&#x25BC;</span>
+          </div>
+          <div class="answer" *ngIf="faq.open">
+            <p>{{ faq.answer }}</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
