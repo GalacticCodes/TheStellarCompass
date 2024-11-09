@@ -9,6 +9,10 @@
         <!-- Subtitle/Description -->
         <p class="has-text-centered has-text-white">This chart uses the whole sign house system.</p>
         
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+        
         <form (submit)="onSubmit()">
           <!-- Name Field -->
           <div class="field">

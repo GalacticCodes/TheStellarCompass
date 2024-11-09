@@ -2,10 +2,12 @@
   <div #chartContainer class="chart-container has-background-info-light">
 
       <!-- Header container for birth details -->
-      <div id="header-content" class="header-container">
-          <p> Name: {{ name }}</p>
-          <p>Born on {{ birthDate }} at {{ birthUtcTime }}</p>
-          <p> Latitude {{ birthLatitude }}, Longitude {{ birthLongitude }}</p>
+      <div id="header-content" class="header-container" style="font-weight: bold;">
+        <p class="cursive">{{ name }}</p>
+        <p>Born on {{ birthDate }} at </p>
+        <p>Local: {{ birthLocalTime }} and UTC: {{ birthUtcTime }}</p>
+        <p>Lat. {{ birthLatitude }}, Lon. {{ birthLongitude }} </p>
+        <p>{{ birthTown }}</p>
       </div>
 
       <div class="wheel-container">
@@ -29,11 +31,30 @@
           </app-aspects>
       </div>
 
-      <!-- Container for the text and logo in the upper right corner -->
-  <div class="stellar-compass-container">
+<!-- Container for the text and logo in the upper right corner -->
+<div class="stellar-compass-container">
     <h1>The Stellar Compass</h1>
-    <p>Study the cosmos, illuminate yourself</p>
-    </div>
+    <h2 class="cursive">Study the cosmos, illuminate yourself</h2>
+    
+    <!-- Horizontal line -->
+    <hr style="margin: 0px 0; border: none; border-top: .2px solid #ddd; ">
+  
+    <!-- Additional software and chart format information -->
+    <p style="font-weight: bold;">
+      This chart uses tropical whole sign astrology methods powered by PySwissEph under the AGPL license.
+    </p>
+  </div>
+<!-- Pass formData to NatalDetailsComponent -->
+<app-natal-details
+[formData]="{
+  birthDate: birthDate,
+  birthTime: birthUtcTime,
+  birthLatitude: birthLatitude,
+  birthLongitude: birthLongitude
+}"
+class="natal-details-pinned">
+</app-natal-details>
+
 
 
   </div>

@@ -56,6 +56,10 @@ export const routes: Routes = [
       {
         path: 'testimonials',
         loadChildren: () => import('./pages/testimonials/testimonials.routes').then(m => m.TestimonialsRoutes)
+      },
+      {
+        path: 'natal-details',
+        loadChildren: () => import('./pages/calculate/components/astro-chart/components/natal-details/natal-details.routes').then(m=>m.NatalDetailsRoutes)
       }
      
     ]

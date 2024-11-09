@@ -126,7 +126,7 @@ export class BaseChartComponent implements OnInit {
           .startAngle(startAngle)
           .endAngle(endAngle) as any)
         .attr('stroke', 'black')
-        .attr('stroke-width', 0.75)  // Thinner line
+        .attr('stroke-width', 1.69)  // Thinner line
         .attr('stroke-opacity', 0.1)  // Adjust opacity to make the lines semi-transparent
         .attr('fill', 'none');
     });

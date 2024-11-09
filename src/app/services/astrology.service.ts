@@ -12,7 +12,7 @@ export class AstrologyService {
   
   calculatePositions(data: { date: string, time: string, latitude: number, longitude: number }): Observable<any> {
     // Call the backend API to calculate both the positions and speeds of planets
-    return this.http.post('https://api.thestellarcompass.com/calculate-positions', data);
+    return this.http.post('http://localhost:5000/calculate-positions', data);
   }
 }
 

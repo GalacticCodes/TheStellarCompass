@@ -1,1 +1,32 @@
-<p>natal-details works!</p>
+<div class="natal-details-container">
+    <h2>Natal and Transit Planetary Positions</h2>
+    <table class="planetary-positions-table">
+      <thead>
+        <tr>
+          <th>Planet</th>
+          <th>Natal Placement</th>
+          <th>Transit Placement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let planet of planets">
+          <td>{{ planet }}</td>
+          <td>
+            <!-- Display natal placement if available; otherwise, show "N/A" -->
+            <span *ngIf="natalPositions[planet]">
+              {{ natalPositions[planet].degree }}° {{ natalPositions[planet].position }}
+            </span>
+            <span *ngIf="!natalPositions[planet]">N/A</span>
+          </td>
+          <td>
+            <!-- Display transit placement if available; otherwise, show "N/A" -->
+            <span *ngIf="transitPositions[planet]">
+              {{ transitPositions[planet].degree }}° {{ transitPositions[planet].position }}
+            </span>
+            <span *ngIf="!transitPositions[planet]">N/A</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -6,7 +6,7 @@ import { PlanetComponent } from './components/planets/planets.component';
 import { TransitsComponent } from './components/transits/transits.component';
 import { CommonModule } from '@angular/common';
 import { AstroTableComponent } from '../../../../layout/astro-table/astro-table.component';
-
+import { NatalDetailsComponent } from './components/natal-details/natal-details.component';
 
 @Component({
   selector: 'app-astro-chart',
@@ -18,8 +18,8 @@ import { AstroTableComponent } from '../../../../layout/astro-table/astro-table.
     PlanetComponent,
     TransitsComponent,
     CommonModule,
-    AstroTableComponent
-
+    AstroTableComponent,
+   NatalDetailsComponent
 ],
   templateUrl: './astro-chart.component.html',
   styleUrls: ['./astro-chart.component.css']
@@ -28,6 +28,7 @@ export class AstroChartComponent implements OnChanges {
   @Input() name!: string;
   @Input() birthDate!: string;
   @Input() birthUtcTime!: string;
+  @Input() birthLocalTime!: string;
   @Input() birthLatitude!: number;
   @Input() birthLongitude!: number;
   @Input() birthTown!: string;
@@ -40,7 +41,7 @@ export class AstroChartComponent implements OnChanges {
     if (
       changes['birthDate'] || changes['birthUtcTime'] ||
       changes['birthLatitude'] || changes['birthLongitude'] ||
-      changes['birthTown'] 
+      changes['birthTown'] || changes['birthLocalTime']
     ) {
       // Check if all required fields have a value and are not undefined
       if (
@@ -55,6 +56,10 @@ export class AstroChartComponent implements OnChanges {
         console.log('Form Not Submitted: Missing required fields');
       }
 
+       // Optional: Log specific changes
+       if (changes['birthLocalTime']) {
+        console.log('birthLocalTime changed:', changes['birthLocalTime'].currentValue);
+      }
       // Log the specific changes (optional)
       if (changes['birthDate']) {
         console.log('birthDate changed:', changes['birthDate'].currentValue);

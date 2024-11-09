@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UserInputComponent } from './components/user-input/user-input.component';
 import { AstroChartComponent } from './components/astro-chart/astro-chart.component';
 import { GalaxyCanvasComponent } from '../../layout/galaxy-canvas/galaxy-canvas.component';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-calculate',
   standalone: true,
@@ -11,7 +11,7 @@ import { GalaxyCanvasComponent } from '../../layout/galaxy-canvas/galaxy-canvas.
     CommonModule, 
     UserInputComponent, 
     AstroChartComponent,
-    GalaxyCanvasComponent
+    GalaxyCanvasComponent, HttpClientModule
   ],
   templateUrl: './calculate.component.html',
   styleUrls: ['./calculate.component.css']

@@ -462,4 +462,25 @@ app-galaxy-canvas{
   vertical-align: left;
   margin-right: 0.5rem;
 }
-  
+
+/* Invitation Section Styling */
+.invitation-section {
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+  margin: 20px auto;
+  border-radius: 15px;
+  width: 100%; /* Ensure it takes up full width within the container */
+  word-wrap: break-word; /* Allow text wrapping */
+  overflow-wrap: break-word; /* Ensure long words wrap */
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 768px) {
+  .invitation-section {
+    width: 95vw; /* Set to 95% of the viewport width */
+    max-width: 95vw; /* Override max-width on mobile */
+  }
+}
+
+

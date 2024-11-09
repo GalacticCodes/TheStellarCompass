@@ -1,15 +1,15 @@
 .chart-container {
   position: relative;
-  padding-top: calc( 8.5 / 11 * 100%);  /* Maintain the aspect ratio of 8.5x11 */  /* Maximum width for desktop */
-  max-width: 950px;
-  height: auto;  /* Allow height to adjust based on width */
-  margin: 0 auto;  /* Center the container */
+  aspect-ratio: 8.5 / 11;  /* Maintains an 8.5x11 aspect ratio */
+  max-width: 810px;        /* Maximum width for desktop */
+  width: 100%;             /* Full width up to the max-width */
+  margin: 0 auto;          /* Center the container */
   display: flex;
   justify-content: center;
   align-items: center;
-    /* Hide any overflow content */
-  min-height: 100vh; 
+  overflow: hidden;        /* Hide any overflow content */
 }
+
 
 .header-container {
   position: absolute;
@@ -17,14 +17,14 @@
   left: 0;
   text-align: left;
   color: black;
-  font-size: calc(0.99vw + 0.43vh); /* Scale text size based on viewport dimensions */
+  font-size: calc(1.5vw); /* Scale text size based on viewport dimensions */
   padding: calc(0.22vw + 0.22vh); /* Consistent padding */
 }
 
 /* Child components (e.g., app-base-chart, app-planets, etc.) are still positioned relatively within the wheel-container */
 app-base-chart, app-houses, app-planets, app-transits, app-aspects {
   position: absolute;
-  top: 10%;
+  top: 12%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -57,17 +57,39 @@ app-aspects {
   color: black;
   font-size: calc(0.69vw + 0.33vh); /* Same font scaling as header */
   padding: calc(0.22vw + 0.22vh); /* Consistent padding with header */
+  width: 50vw ;
+  max-width: 450px;
 }
 
 .stellar-compass-container h1 {
-  font-size: calc(2.1vw + 1.2vh); /* Larger scaling for the title */
-  color: #333; /* Dark text color */
+  font-size: 3.6vw;  /* Default scaling with viewport width */
+  color: black;
 }
 
 .stellar-compass-container p {
-  font-size: calc(0.99vw + 0.44vh); /* Same font scaling as header */
-  color: #333; /* Lighter text color */
+  font-size: 1.5vw;  /* Proportionally smaller than h1 */
+  color: black;
 }
+
+
+.cursive{
+  font-family: cursive; font-size: 2.1vw;}
+
+/* Limit font size at a max viewport width of 1155px */
+@media (min-width: 999px) {
+  .stellar-compass-container h1{
+    font-size: 28.875px;  /* 2.5vw at 1155px */
+  }
+
+  .cursive{
+    font-size: 21px;
+  }
+
+  .stellar-compass-container p, .header-container{
+    font-size: 13.86px;   /* 1.2vw at 1155px */
+  }
+}
+
 
 /* Ensure proper scaling on mobile devices */
 @media (max-width: 600px) {
@@ -78,15 +100,13 @@ app-aspects {
   }
 }
 
-app-legend{
+
+
+.natal-details-pinned {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  text-align: left;
-  color: black;
-  font-size: calc(0.69vw + 0.33vh); /* Same font scaling as header */
-  padding: calc(0.22vw + 0.22vh); /* Consistent padding with header */
+  bottom: 20px;        /* Adjust as needed */
+  left: 20px;          /* Adjust as needed */
+  color: black;        /* Black font color */
+  background: none;    /* Transparent background */
+  z-index: 5;
 }
-
-
-

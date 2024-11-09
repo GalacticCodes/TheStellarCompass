@@ -10,11 +10,12 @@ import { FamilySynastryComponent } from './pages/family-synastry/family-synastry
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { AboutComponent } from './pages/about/about.component';
 import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
+import { NatalDetailsComponent } from './pages/calculate/components/astro-chart/components/natal-details/natal-details.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, NavbarComponent, FooterComponent, FaqComponent, AstroTableComponent, ReadingCheckoutComponent, FamilySynastryComponent, PrivacyPolicyComponent, AboutComponent, TestimonialsComponent],
+  imports: [RouterOutlet, HomeComponent, NavbarComponent, FooterComponent, FaqComponent, AstroTableComponent, ReadingCheckoutComponent, FamilySynastryComponent, PrivacyPolicyComponent, AboutComponent, TestimonialsComponent, NatalDetailsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
